@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{35A6AACE-4EB1-4A6C-A065-023B8D1251B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>App</RootNamespace>
+    <AssemblyName>App</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="formAgregarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAgregarCliente.Designer.cs">
+      <DependentUpon>formAgregarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formAgregarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formAgregarFuncionario.Designer.cs">
+      <DependentUpon>formAgregarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formBusquedaEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formBusquedaEmpresa.Designer.cs">
+      <DependentUpon>formBusquedaEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formGestionContratos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formGestionContratos.Designer.cs">
+      <DependentUpon>formGestionContratos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formGestionFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formGestionFuncionarios.Designer.cs">
+      <DependentUpon>formGestionFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formGestionReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formGestionReportes.Designer.cs">
+      <DependentUpon>formGestionReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formGestionServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formGestionServicios.Designer.cs">
+      <DependentUpon>formGestionServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formGestionVisitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formGestionVisitas.Designer.cs">
+      <DependentUpon>formGestionVisitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Request\clienteRequest.cs" />
+    <Compile Include="Model\Request\funcionarioRequest.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formAgregarCliente.resx">
+      <DependentUpon>formAgregarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formAgregarFuncionario.resx">
+      <DependentUpon>formAgregarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formBusquedaEmpresa.resx">
+      <DependentUpon>formBusquedaEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formGestionContratos.resx">
+      <DependentUpon>formGestionContratos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formGestionFuncionarios.resx">
+      <DependentUpon>formGestionFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formGestionReportes.resx">
+      <DependentUpon>formGestionReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formGestionServicios.resx">
+      <DependentUpon>formGestionServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formGestionVisitas.resx">
+      <DependentUpon>formGestionVisitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
