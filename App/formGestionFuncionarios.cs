@@ -95,18 +95,20 @@ namespace App
         private void btnEliminarFun_Click(object sender, EventArgs e)
         {
 
-            string url = "http://localhost:4000/api/funcionario";
+            /*string url = "http://localhost:4000/api/funcionario";
 
-            funcionarioRequest oFun = new funcionarioRequest();
+            funcionarioRequest oFun = new funcionarioRequest();*/
+            /*oFun.idFuncionario =*/
+            /*string resultado = Delete<funcionarioRequest>(url, oFun, "DELETE");*/
 
             try
             {
                 oc.Open();
                 OracleCommand cmd = new OracleCommand("SP_ELIMINAR_FUNCIONARIO", oc);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.Add("ID", OracleType.Int32).Value = oFun.idFuncionario = Convert.ToInt32(txtIdFun.Text);
+                cmd.Parameters.Add("ID", OracleType.Int32).Value =  Convert.ToInt32(txtIdFun.Text);
                 cmd.ExecuteNonQuery();
-                string resultado = Delete<funcionarioRequest>(url, oFun, "DELETE");
+                
                 MessageBox.Show("Funcionario Creado con Exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)

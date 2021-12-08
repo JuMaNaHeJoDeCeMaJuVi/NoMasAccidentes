@@ -33,7 +33,7 @@ namespace App
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnGenerarPdf = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
@@ -77,23 +77,25 @@ namespace App
             this.dataGridView1.Size = new System.Drawing.Size(1169, 397);
             this.dataGridView1.TabIndex = 7;
             // 
-            // iconButton1
+            // btnGenerarPdf
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.Maroon;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 40;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(37, 585);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(161, 76);
-            this.iconButton1.TabIndex = 9;
-            this.iconButton1.Text = "Exportar PDF";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.btnGenerarPdf.BackColor = System.Drawing.Color.Maroon;
+            this.btnGenerarPdf.FlatAppearance.BorderSize = 0;
+            this.btnGenerarPdf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarPdf.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarPdf.ForeColor = System.Drawing.Color.White;
+            this.btnGenerarPdf.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
+            this.btnGenerarPdf.IconColor = System.Drawing.Color.White;
+            this.btnGenerarPdf.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGenerarPdf.IconSize = 40;
+            this.btnGenerarPdf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenerarPdf.Location = new System.Drawing.Point(37, 585);
+            this.btnGenerarPdf.Name = "btnGenerarPdf";
+            this.btnGenerarPdf.Size = new System.Drawing.Size(185, 76);
+            this.btnGenerarPdf.TabIndex = 9;
+            this.btnGenerarPdf.Text = "Exportar PDF";
+            this.btnGenerarPdf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGenerarPdf.UseVisualStyleBackColor = false;
             // 
             // iconButton2
             // 
@@ -173,7 +175,7 @@ namespace App
             this.Controls.Add(this.iconButton4);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.iconButton2);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.btnGenerarPdf);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
@@ -193,7 +195,7 @@ namespace App
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnGenerarPdf;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton4;
