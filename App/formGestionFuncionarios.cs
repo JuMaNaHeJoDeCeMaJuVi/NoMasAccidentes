@@ -96,25 +96,27 @@ namespace App
         {
 
             /*string url = "http://localhost:4000/api/funcionario";
-
             funcionarioRequest oFun = new funcionarioRequest();*/
             /*oFun.idFuncionario =*/
             /*string resultado = Delete<funcionarioRequest>(url, oFun, "DELETE");*/
 
-            try
-            {
-                oc.Open();
-                OracleCommand cmd = new OracleCommand("SP_ELIMINAR_FUNCIONARIO", oc);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.Add("ID", OracleType.Int32).Value =  Convert.ToInt32(txtIdFun.Text);
-                cmd.ExecuteNonQuery();
-                
-                MessageBox.Show("Funcionario Creado con Exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            /*oc.Open();
+            OracleCommand cmd = new OracleCommand("SP_ELIMINAR_FUNCIONARIO", oc);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.Add("ID", OracleType.Int32).Value =  Convert.ToInt32(txtIdFun.Text);
+            cmd.ExecuteNonQuery();
+
+            MessageBox.Show("Funcionario Creado con Exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            oc.Close();*/
+            oc.Open();
+            OracleCommand cmd = new OracleCommand("seleccionarfuncionario", oc);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.Add("registro", OracleType.Cursor).Direction = ParameterDirection.Output;
+            OracleDataAdapter adapt = new OracleDataAdapter();
+            adapt.SelectCommand = cmd;
+            DataTable tb = new DataTable();
+            adapt.Fill(tb);
+            dtvDatos.DataSource = tb;
             oc.Close();
         }
 
