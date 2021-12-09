@@ -222,7 +222,6 @@ namespace App
             this.txtPassUsu.Name = "txtPassUsu";
             this.txtPassUsu.Size = new System.Drawing.Size(231, 22);
             this.txtPassUsu.TabIndex = 17;
-            this.txtPassUsu.Text = "Contraseña";
             // 
             // txtCorEleFun
             // 
