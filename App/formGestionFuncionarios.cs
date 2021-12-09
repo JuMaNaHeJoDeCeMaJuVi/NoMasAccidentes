@@ -95,29 +95,19 @@ namespace App
         private void btnEliminarFun_Click(object sender, EventArgs e)
         {
 
-            /*string url = "http://localhost:4000/api/funcionario";
-            funcionarioRequest oFun = new funcionarioRequest();*/
-            /*oFun.idFuncionario =*/
-            /*string resultado = Delete<funcionarioRequest>(url, oFun, "DELETE");*/
+            string url = "http://localhost:4000/api/funcionario";
+            funcionarioRequest oFun = new funcionarioRequest();
+            
 
-            /*oc.Open();
+            oc.Open();
             OracleCommand cmd = new OracleCommand("SP_ELIMINAR_FUNCIONARIO", oc);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.Add("ID", OracleType.Int32).Value =  Convert.ToInt32(txtIdFun.Text);
+            cmd.Parameters.Add("ID", OracleType.Int32).Value = oFun.idFuncionario = Convert.ToInt32(txtIdFun.Text);
             cmd.ExecuteNonQuery();
-
-            MessageBox.Show("Funcionario Creado con Exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            oc.Close();*/
-            oc.Open();
-            OracleCommand cmd = new OracleCommand("seleccionarfuncionario", oc);
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.Add("registro", OracleType.Cursor).Direction = ParameterDirection.Output;
-            OracleDataAdapter adapt = new OracleDataAdapter();
-            adapt.SelectCommand = cmd;
-            DataTable tb = new DataTable();
-            adapt.Fill(tb);
-            dtvDatos.DataSource = tb;
+            string resultado = Delete<funcionarioRequest>(url, oFun, "DELETE");
+            MessageBox.Show("Funcionario Eliminado con Exito", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             oc.Close();
+            
         }
 
         private void checkbSeleccion_CheckedChanged(object sender, EventArgs e)
